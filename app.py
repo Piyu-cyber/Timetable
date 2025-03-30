@@ -14,7 +14,7 @@ def load_data():
         print(f"Files in directory: {os.listdir('.')}")
         
         # Check if the file exists
-        csv_file = 'combined timetable 2.csv'
+        csv_file = 'combined timetable  .csv'
         if not os.path.exists(csv_file):
             print(f"CSV file not found: {csv_file}")
             return get_sample_data()
