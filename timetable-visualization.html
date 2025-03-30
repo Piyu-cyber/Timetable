@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Timetable Visualization</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        select, button {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 14px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .timetable-container {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 800px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .time-slot {
+            font-weight: bold;
+            min-width: 120px;
+        }
+        
+        .course-cell {
+            position: relative;
+            padding: 8px;
+            min-height: 60px;
+            vertical-align: top;
+        }
+        
+        .course {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 6px;
+            background-color: #e1f0fa;
+            border-left: 4px solid #3498db;
+        }
+        
+        .course.lecture {
+            background-color: #e1f0fa;
+            border-left-color: #3498db;
+        }
+        
+        .course.tutorial {
+            background-color: #e8f8f5;
+            border-left-color: #2ecc71;
+        }
+        
+        .course.practical {
+            background-color: #fef9e7;
+            border-left-color: #f1c40f;
+        }
+        
+        .course.break {
+            background-color: #f2f3f4;
+            border-left-color: #95a5a6;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .course-code {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .course-title {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        
+        .course-details {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        .elective-badge {
+            display: inline-block;
+            background-color: #9b59b6;
+            color: white;
+            font-size: 11px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+        }
+        
+        .empty-message {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        .break-cell {
+            background-color: #f2f3f4;
+            text-align: center;
+        }
+        
+        .break {
+            margin: 0 auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Academic Timetable</h1>
+    
+    <div class="controls">
+        <div class="filter-group">
+            <label for="branch-filter">Branch:</label>
+            <select id="branch-filter">
+                <option value="all">All Branches</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="DSAI">DSAI</option>
+                <option value="electives">Electives Only</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="faculty-filter">Faculty:</label>
+            <select id="faculty-filter">
+                <option value="all">All Faculty</option>
+                <!-- Faculty options will be populated dynamically -->
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="room-filter">Room:</label>
+            <select id="room-filter">
+                <option value="all">All Rooms</option>
+                <!-- Room options will be populated dynamically -->
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="session-filter">Session Type:</label>
+            <select id="session-filter">
+                <option value="all">All Sessions</option>
+                <option value="Lecture">Lectures</option>
+                <option value="Tutorial">Tutorials</option>
+                <option value="Practical">Practicals</option>
+                <option value="Break">Breaks</option>
+            </select>
+        </div>
+        
+        <button id="reset-filters">Reset Filters</button>
+    </div>
+    
+    <div class="timetable-container">
+        <table id="timetable">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Timetable data will be populated dynamically -->
+            </tbody>
+        </table>
+        <div id="empty-message" class="empty-message" style="display: none;">
+            No courses match the selected filters.
+        </div>
+    </div>
+    
+    <div class="legend">
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e1f0fa; border-left: 4px solid #3498db;"></div>
+            <span>Lecture</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #e8f8f5; border-left: 4px solid #2ecc71;"></div>
+            <span>Tutorial</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #fef9e7; border-left: 4px solid #f1c40f;"></div>
+            <span>Practical</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #f2f3f4; border-left: 4px solid #95a5a6;"></div>
+            <span>Break</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background-color: #9b59b6;"></div>
+            <span>Elective Course</span>
+        </div>
+    </div>
+    
+    <script>
+        // Time slots order
+        const timeSlots = [
+            "09:00-10:00", "10:00-11:00", "11:00-12:00", "12:00-13:00",
+            "13:00-14:00", "14:00-15:00", "15:00-16:00", "16:00-17:00",
+            "17:00-17:30"
+        ];
+        
+        // Variable to store data
+        let timetableData = [];
+        
+        // Function to fetch data from server
+        async function fetchTimetableData() {
+            try {
+                console.log("Fetching timetable data from server...");
+                const response = await fetch('/data');
+                if (!response.ok) {
+                    throw new Error(`Server returned ${response.status}: ${response.statusText}`);
+                }
+                const data = await response.json();
+                console.log(`Received ${data.length} records from server`);
+                // Log a sample record for debugging
+                if (data.length > 0) {
+                    console.log("Sample record:", data[0]);
+                }
+                return data;
+            } catch (error) {
+                console.error('Error fetching timetable data:', error);
+                alert('Error loading timetable data. Please check the console for details.');
+                return [];
+            }
+        }
+        
+        // Function to render the timetable
+        function renderTimetable(data) {
+            console.log(`Rendering timetable with ${data.length} records`);
+            const tbody = document.querySelector('#timetable tbody');
+            tbody.innerHTML = '';
+            
+            // Check if data is empty after filtering
+            if (data.length === 0 || (data.length === 10 && data.every(item => item.sessionType === "Break"))) {
+                console.log("No data to display, showing empty message");
+                document.getElementById('empty-message').style.display = 'block';
+                document.getElementById('timetable').style.display = 'none';
+                return;
+            } else {
+                document.getElementById('empty-message').style.display = 'none';
+                document.getElementById('timetable').style.display = 'table';
+            }
+            
+            // Group data by time slots
+            const timeSlotMap = {};
+            timeSlots.forEach(timeSlot => {
+                timeSlotMap[timeSlot] = {};
+                ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].forEach(day => {
+                    timeSlotMap[timeSlot][day] = [];
+                });
+            });
+            
+            // Populate the time slot map
+            data.forEach((item, index) => {
+                try {
+                    if (!item.time || !item.day) {
+                        console.warn(`Item ${index} is missing time or day:`, item);
+                        return; // Skip this item
+                    }
+                    
+                    // For break items, only add them once per time slot
+                    if (item.sessionType === "Break") {
+                        // If this is a break, only add it to Monday column to avoid duplication
+                        if (item.day === "Monday" && timeSlotMap[item.time]["Monday"]) {
+                            timeSlotMap[item.time]["Monday"].push(item);
+                        }
+                    } else {
+                        // For non-break items, add normally
+                        if (timeSlotMap[item.time] && timeSlotMap[item.time][item.day]) {
+                            timeSlotMap[item.time][item.day].push(item);
+                        } else {
+                            console.warn(`Item ${index} has invalid time or day:`, 
+                                         `Time: "${item.time}", Day: "${item.day}"`);
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error processing item ${index}:`, error, item);
+                }
+            });
+            
+            // Log the populated map for debugging
+            console.log("Populated time slot map:", 
+                        Object.keys(timeSlotMap).map(time => 
+                            `${time}: ${Object.values(timeSlotMap[time])
+                            .flat().length} courses`).join(', '));
+            
+            // Create rows for each time slot
+            timeSlots.forEach(timeSlot => {
+                const row = document.createElement('tr');
+                
+                // Time slot cell
+                const timeCell = document.createElement('td');
+                timeCell.className = 'time-slot';
+                timeCell.textContent = timeSlot;
+                row.appendChild(timeCell);
+                
+                // Check if this is a break time slot
+                const hasBreak = timeSlotMap[timeSlot]["Monday"] && 
+                                timeSlotMap[timeSlot]["Monday"].some(item => item.sessionType === "Break");
+                
+                if (hasBreak) {
+                    // Get the break item
+                    const breakItem = timeSlotMap[timeSlot]["Monday"].find(item => item.sessionType === "Break");
+                    
+                    // Create a single cell that spans all columns
+                    const breakCell = document.createElement('td');
+                    breakCell.className = 'course-cell break-cell';
+                    breakCell.setAttribute('colspan', '5'); // Span all days
+                    
+                    const courseDiv = document.createElement('div');
+                    courseDiv.className = 'course break';
+                    courseDiv.innerHTML = `<div class="course-title">${breakItem.courseTitle}</div>`;
+                    
+                    breakCell.appendChild(courseDiv);
+                    row.appendChild(breakCell);
+                } else {
+                    // Cells for each day (for non-break time slots)
+                    ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].forEach(day => {
+                        const dayCell = document.createElement('td');
+                        dayCell.className = 'course-cell';
+                        
+                        // Add courses for this day and time slot
+                        const courses = timeSlotMap[timeSlot][day] || [];
+                        courses.forEach(course => {
+                            const courseDiv = document.createElement('div');
+                            courseDiv.className = `course ${course.sessionType.toLowerCase()}`;
+                            
+                            let courseContent = '';
+                            
+                            // Course code with elective badge if applicable
+                            courseContent += `<div class="course-code">${course.courseCode}`;
+                            if (course.branch && course.branch.startsWith('B')) {
+                                courseContent += `<span class="elective-badge">Elective</span>`;
+                            }
+                            courseContent += '</div>';
+                            
+                            // Course title and details
+                            courseContent += `<div class="course-title">${course.courseTitle}</div>`;
+                            courseContent += `<div class="course-details">
+                                <span>${course.sessionType}</span>
+                                <span>${course.room}</span>
+                                <span>${course.faculty}</span>
+                            </div>`;
+                            
+                            if (course.branch && !course.branch.startsWith('B')) {
+                                courseContent += `<div class="course-details">
+                                    <span>Branch: ${course.branch}</span>
+                                </div>`;
+                            }
+                            
+                            courseDiv.innerHTML = courseContent;
+                            dayCell.appendChild(courseDiv);
+                        });
+                        
+                        row.appendChild(dayCell);
+                    });
+                }
+                
+                tbody.appendChild(row);
+            });
+        }
+        
+        // Function to populate filter dropdowns
+        function populateFilters(data) {
+            const facultyFilter = document.getElementById('faculty-filter');
+            const roomFilter = document.getElementById('room-filter');
+            
+            // Get unique faculties
+            const faculties = [...new Set(data
+                .filter(item => item.faculty && item.faculty.trim() !== '')
+                .map(item => item.faculty))].sort();
+            
+            // Populate faculty filter
+            facultyFilter.innerHTML = '<option value="all">All Faculty</option>';
+            faculties.forEach(faculty => {
+                const option = document.createElement('option');
+                option.value = faculty;
+                option.textContent = faculty;
+                facultyFilter.appendChild(option);
+            });
+            
+            // Get unique rooms
+            const rooms = [...new Set(data
+                .filter(item => item.room && item.room.trim() !== '')
+                .map(item => item.room))].sort();
+            
+            // Populate room filter
+            roomFilter.innerHTML = '<option value="all">All Rooms</option>';
+            rooms.forEach(room => {
+                const option = document.createElement('option');
+                option.value = room;
+                option.textContent = room;
+                roomFilter.appendChild(option);
+            });
+        }
+        
+        // Function to apply filters
+        function applyFilters() {
+            const branchFilter = document.getElementById('branch-filter').value;
+            const facultyFilter = document.getElementById('faculty-filter').value;
+            const roomFilter = document.getElementById('room-filter').value;
+            const sessionFilter = document.getElementById('session-filter').value;
+            
+            let filteredData = [...timetableData];
+            
+            // Apply branch filter
+            if (branchFilter !== 'all') {
+                if (branchFilter === 'electives') {
+                    filteredData = filteredData.filter(item => 
+                        item.branch && item.branch.startsWith('B') || item.sessionType === 'Break'
+                    );
+                } else {
+                    filteredData = filteredData.filter(item => 
+                        item.branch === branchFilter || item.sessionType === 'Break'
+                    );
+                }
+            }
+            
+            // Apply faculty filter
+            if (facultyFilter !== 'all') {
+                filteredData = filteredData.filter(item => 
+                    item.faculty === facultyFilter || item.sessionType === 'Break'
+                );
+            }
+            
+            // Apply room filter
+            if (roomFilter !== 'all') {
+                filteredData = filteredData.filter(item => 
+                    item.room === roomFilter || item.sessionType === 'Break'
+                );
+            }
+            
+            // Apply session filter
+            if (sessionFilter !== 'all') {
+                filteredData = filteredData.filter(item => item.sessionType === sessionFilter);
+            }
+            
+            // Render the filtered timetable
+            renderTimetable(filteredData);
+        }
+        
+        // Initialize the timetable
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Fetch data from the server
+            timetableData = await fetchTimetableData();
+            
+            // Populate filter dropdowns
+            populateFilters(timetableData);
+            
+            // Render the initial timetable
+            renderTimetable(timetableData);
+            
+            // Add event listeners to filters
+            document.getElementById('branch-filter').addEventListener('change', applyFilters);
+            document.getElementById('faculty-filter').addEventListener('change', applyFilters);
+            document.getElementById('room-filter').addEventListener('change', applyFilters);
+            document.getElementById('session-filter').addEventListener('change', applyFilters);
+            
+            // Add event listener to reset button
+            document.getElementById('reset-filters').addEventListener('click', () => {
+                document.getElementById('branch-filter').value = 'all';
+                document.getElementById('faculty-filter').value = 'all';
+                document.getElementById('room-filter').value = 'all';
+                document.getElementById('session-filter').value = 'all';
+                applyFilters();
+            });
+        });
+    </script>
+</body>
+</html>

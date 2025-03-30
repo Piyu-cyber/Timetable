@@ -1,0 +1,203 @@
+Day,Time,Room,Course Code,Course Title,Faculty,Session Type,Branch
+Monday,09:00-10:00,C002,DS355,Data Analytics and Visualization,Dr. Sunil CK,Lecture,CSE
+Monday,09:00-10:00,C003,CS162,Optimization,Dr. Dibyajyoti Guha,Lecture,DSAI
+Monday,09:00-10:00,C305,EC307,Wireless Communication,Dr. Rajib Sharma/ Dr. Rao (Lab),Lecture,ECE
+Monday,09:00-10:00,C102,EC310,Embedded Systems Design,Dr. Prakash Pawar,Tutorial,ECE
+Monday,09:00-10:00,C104,CS455,Blockchain Technology,Dr. Rajendra H,Lecture,DSAI
+Monday,10:00-11:00,C003,CS162,Optimization,Dr. Dibyajyoti Guha,Tutorial,DSAI
+Monday,10:00-11:00,C303,CS307,Machine Learning,Dr. Deepak K T,Lecture,ECE
+Monday,10:00-11:00,C206,DS309,Cloud Computing,Dr. Animesh Chaturvedi,Lecture,DSAI
+Monday,10:00-11:00,C101, CS164,Computer Architecture,Dr. Manjunath,Lecture,DSAI
+Monday,10:00-11:00,L106, CS163,Data Structures and Algorithms,Dr. Sunil Saumya,Practical,DSAI
+Monday,10:00-11:00,L206,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Practical,DSAI
+Monday,11:00-12:00,C002,HS161,English Language and Communication,Dr. Rajesh N S,Lecture,ECE
+Monday,11:00-12:00,C302,DS164,Data Curation Techniques,Dr. Siddharth R.,Lecture,DSAI
+Monday,11:00-12:00,C303,CS301,Software Engineering,Dr. Vivekraj V K/ Dr. Sunil Kumar P V,Tutorial,CSE
+Monday,11:00-12:00,C305,DS358,Deep Speech Processing,Prof. SRM Prasanna,Lecture,ECE
+Monday,11:00-12:00,C206,HS205,Ethics,Dr. Jolly Thomas,Lecture,ECE
+Monday,11:00-12:00,C101,CS458,Natural Language Processing,Dr. Krishnendu,Lecture,ECE
+Monday,11:00-12:00,C102,EC310,Embedded Systems Design,Dr. Prakash Pawar,Lecture,ECE
+Monday,11:00-12:00,L106,DS204,Software Engineering and Services,Dr. Animesh Chaturvedi,Practical,DSAI
+Monday,12:00-13:00,C002,ASD351,Design Thinking and Innovation,Dr. Sandesh P,Tutorial,ECE
+Monday,12:00-13:00,C003,EC451,Microwave Engineering,Dr. Somen,Lecture,CSE
+Monday,12:00-13:00,C204, CS164,Computer Architecture,Dr. Manjunath,Lecture,DSAI
+Monday,12:00-13:00,C302,EC162,Network Analysis,Dr. Sibasankar Padhy,Tutorial,ECE
+Monday,12:00-13:00,C303,DS357,Large Languange Models,Dr. Sunil S,Lecture,DSAI
+Monday,12:00-13:00,C101,CS464,Deep Learning for Computer Vision ,Dr. Chinmayanand,Lecture,ECE
+Monday,12:00-13:00,L206,DS164,Data Curation Techniques,Dr. Siddharth R.,Practical,DSAI
+Monday,13:00-14:00,,,Lunch Break,,Break,
+Monday,14:00-15:00,C002, CS163,Data Structures and Algorithms,Dr. Sunil Saumya,Lecture,DSAI
+Monday,14:00-15:00,C003,CS462,Computer Graphics,Dr. Vivekraj V K,Tutorial,CSE
+Monday,14:00-15:00,C004,PH352,Quantum Communication,Dr. Aswath B,Lecture,DSAI
+Monday,14:00-15:00,C302,EC162,Network Analysis,Dr. Sibasankar Padhy,Lecture,ECE
+Monday,14:00-15:00,C101,CS464,Deep Learning for Computer Vision ,Dr. Chinmayanand,Lecture,ECE
+Monday,14:00-15:00,L206,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Practical,DSAI
+Monday,15:00-16:00,C003,EC451,Microwave Engineering,Dr. Somen,Lecture,CSE
+Monday,15:00-16:00,C204,CS365,Model Checking,Dr. Pavan,Lecture,CSE
+Monday,15:00-16:00,C303,CS307,Machine Learning,Dr. Deepak K T,Lecture,ECE
+Monday,15:00-16:00,C206,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Lecture,DSAI
+Monday,15:00-16:00,C101,HS204,Economics,Dr.Anushree K,Tutorial,ECE
+Monday,15:00-16:00,L206,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Practical,ECE
+Monday,16:00-17:00,C003,CS462,Computer Graphics,Dr. Vivekraj V K,Lecture,CSE
+Monday,16:00-17:00,C203,DS204,Software Engineering and Services,Dr. Animesh Chaturvedi,Lecture,DSAI
+Monday,16:00-17:00,C101,CS458,Natural Language Processing,Dr. Krishnendu,Lecture,ECE
+Monday,16:00-17:00,C102,HS206,Industrial Social Psychology,Dr. Navyashree,Lecture,DSAI
+Monday,16:00-17:00,C104,EC362,Automotive Embedded and Multimedia Systems,Mr. Jagadeesh K                                              (Dr Sibasankar Padhy),Lecture,CSE
+Monday,16:00-17:00,L106, CS163,Data Structures and Algorithms,Dr. Sunil Saumya,Practical,DSAI
+Monday,16:00-17:00,L206,CS164,Computer Architecture,Dr.Jagadish D N,Practical,ECE
+Monday,17:00-17:30,,,Snack Break,,Break,
+Tuesday,09:00-10:00,C002,MA163,Linear Algebra,Dr. Sibasankar Padhy/ Dr Somen Bhattacharjee,Lecture,CSE
+Tuesday,09:00-10:00,C004,PH352,Quantum Communication,Dr. Aswath B,Lecture,DSAI
+Tuesday,09:00-10:00,C303,HS204 / HS153,Economics/ Innovation and Entrepreneurship,Dr. Anushree Kini/ Dr.Deepak k T/,Tutorial,CSE
+Tuesday,09:00-10:00,C101,CS464,Deep Learning for Computer Vision ,Dr. Chinmayanand,Tutorial,ECE
+Tuesday,09:00-10:00,C104, HS161,English Language and Communication,Dr. Rajesh N S,Lecture,DSAI
+Tuesday,09:00-10:00,L206,CS164,Computer Architecture,Dr.Jagadish D N,Practical,ECE
+Tuesday,10:00-11:00,C002,DS355,Data Analytics and Visualization,Dr. Sunil CK,Tutorial,CSE
+Tuesday,10:00-11:00,C003,EC451,Microwave Engineering,Dr. Somen,Lecture,CSE
+Tuesday,10:00-11:00,C004,CS206,Theory of Computation,Dr. Pavan/ Dr. Sunil C K,Lecture,CSE
+Tuesday,10:00-11:00,C302,CS204,Operating System,Dr. Suvadip Hazra/ Dr. Malay/ Dr. Dibyajyothi,Lecture,CSE
+Tuesday,10:00-11:00,C303,CS307,Machine Learning,Dr. Deepak K T,Tutorial,ECE
+Tuesday,10:00-11:00,C206,DS356,Medical Image Analysis,Dr. Girish GN,Lecture,CSE
+Tuesday,10:00-11:00,C101,EC361,Introduction to 5G Network,Dr. Jagadeesha R Bhat,Lecture,ECE
+Tuesday,10:00-11:00,C104,DS308,Data Security and Privacy,Dr. Abdul Wahid & Dr. Rajendra Hegadi,Tutorial,DSAI
+Tuesday,10:00-11:00,L107,EC205,Control Systems,Dr. Pankaj Kumar,Practical,ECE
+Tuesday,11:00-12:00,C002,HS161,English Language and Communication,Dr. Rajesh N S,Lecture,ECE
+Tuesday,11:00-12:00,C004,CS206,Theory of Computation,Dr. Pavan/ Dr. Sunil C K,Lecture,CSE
+Tuesday,11:00-12:00,C305,DS205,Global Business Perspectives,Mr. Manmohan Singh ( Course Coordinator: Dr. Rajendra Hegadi),Lecture,DSAI
+Tuesday,11:00-12:00,C206,CS471,Deep Computer Vision,Chinmayanand,Lecture,CSE
+Tuesday,11:00-12:00,C102,EC310,Embedded Systems Design,Dr. Prakash Pawar,Lecture,ECE
+Tuesday,11:00-12:00,C104,DS308,Data Security and Privacy,Dr. Abdul Wahid & Dr. Rajendra Hegadi,Lecture,DSAI
+Tuesday,11:00-12:00,L206,CS163,Data Structures & Algorithms,Dr. C. B. Akki/ Dr Suvadip Hazra,Practical,CSE
+Tuesday,12:00-13:00,C003,CS165,Mathematical foundations of Computing,Dr. Animesh Roy,Lecture,CSE
+Tuesday,12:00-13:00,C004,CS164,Computer Architecture,Dr.Jagadish D N,Lecture,ECE
+Tuesday,12:00-13:00,C303,DS357,Large Languange Models,Dr. Sunil S,Lecture,DSAI
+Tuesday,12:00-13:00,C104, HS161,English Language and Communication,Dr. Rajesh N S,Lecture,DSAI
+Tuesday,13:00-14:00,,,Lunch Break,,Break,
+Tuesday,14:00-15:00,C002,DS355,Data Analytics and Visualization,Dr. Sunil CK,Lecture,CSE
+Tuesday,14:00-15:00,C203,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Tutorial,ECE
+Tuesday,14:00-15:00,C206,CS471,Deep Computer Vision,Chinmayanand,Tutorial,CSE
+Tuesday,14:00-15:00,C102,HS206,Industrial Social Psychology,Dr. Navyashree,Lecture,DSAI
+Tuesday,14:00-15:00,L106, CS164,Computer Architecture,Dr. Manjunath,Practical,DSAI
+Tuesday,15:00-16:00,C004,PH352,Quantum Communication,Dr. Aswath B,Lecture,DSAI
+Tuesday,15:00-16:00,C303,HS204 / HS153,Economics/ Innovation and Entrepreneurship,Dr. Anushree Kini/ Dr.Deepak k T/,Lecture,CSE
+Tuesday,15:00-16:00,C304,CS163,Data Structures & Algorithms,Dr. C. B. Akki/ Dr Suvadip Hazra,Lecture,CSE
+Tuesday,15:00-16:00,C305,DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,CSE
+Tuesday,16:00-17:00,C303,DS357,Large Languange Models,Dr. Sunil S,Lecture,DSAI
+Tuesday,16:00-17:00,C305,EC307,Wireless Communication,Dr. Rajib Sharma/ Dr. Rao (Lab),Lecture,ECE
+Tuesday,16:00-17:00,C101, CS163,Data Structures and Algorithms,Dr. Sunil Saumya,Lecture,DSAI
+Tuesday,16:00-17:00,C202,CS163,Data Structures & Algorithms,Dr. C. B. Akki/ Dr Suvadip Hazra,Lecture,CSE
+Tuesday,16:00-17:00,L107,CS204,Operating System,Dr. Suvadip Hazra/ Dr. Malay/ Dr. Dibyajyothi,Practical,CSE
+Tuesday,17:00-17:30,,,Snack Break,,Break,
+Wednesday,09:00-10:00,C003,CS162,Optimization,Dr. Dibyajyoti Guha,Lecture,DSAI
+Wednesday,09:00-10:00,C204,CS365,Model Checking,Dr. Pavan,Lecture,CSE
+Wednesday,09:00-10:00,C303,CS164,Computer Architecture,Dr.Jagadish D N,Lecture,ECE
+Wednesday,09:00-10:00,C305,DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,CSE
+Wednesday,09:00-10:00,C206,DS309,Cloud Computing,Dr. Animesh Chaturvedi,Lecture,DSAI
+Wednesday,09:00-10:00,C101,EC361,Introduction to 5G Network,Dr. Jagadeesha R Bhat,Lecture,ECE
+Wednesday,09:00-10:00,C102,CS204,Operating System,Dr. Suvadip Hazra/ Dr. Malay/ Dr. Dibyajyothi,Lecture,CSE
+Wednesday,09:00-10:00,L206,CS163,Data Structures & Algorithms,Dr. C. B. Akki/ Dr Suvadip Hazra,Practical,CSE
+Wednesday,10:00-11:00,C002,MA163,Linear Algebra,Dr. Sibasankar Padhy/ Dr Somen Bhattacharjee,Lecture,CSE
+Wednesday,10:00-11:00,C304,EC205,Control Systems,Dr. Pankaj Kumar,Lecture,ECE
+Wednesday,10:00-11:00,C206,CS471,Deep Computer Vision,Chinmayanand,Lecture,CSE
+Wednesday,10:00-11:00,C101,HS204,Economics,Dr.Anushree K,Lecture,ECE
+Wednesday,10:00-11:00,C102,CS204,Operating Systems,Dr. Manjunath K V,Tutorial,DSAI
+Wednesday,10:00-11:00,C104,EC362,Automotive Embedded and Multimedia Systems,Mr. Jagadeesh K                                              (Dr Sibasankar Padhy),Lecture,CSE
+Wednesday,10:00-11:00,L106,DS204,Software Engineering and Services,Dr. Animesh Chaturvedi,Practical,DSAI
+Wednesday,10:00-11:00,L105,CS307,Machine Learning,Dr. Girish G N/ Dr. Krishnendu Ghosh,Practical,CSE
+Wednesday,11:00-12:00,C303,HS204 / HS153,Economics/ Innovation and Entrepreneurship,Dr. Anushree Kini/ Dr.Deepak k T/,Lecture,CSE
+Wednesday,11:00-12:00,C206,DS306,Financial Data Analytics,Dr.Utkarsh Khaire,Lecture,DSAI
+Wednesday,12:00-13:00,C002,MA202,Linear Algebra,Dr. Anand Barangi,Tutorial,CSE
+Wednesday,12:00-13:00,C303,CS301,Software Engineering,Dr. Vivekraj V K/ Dr. Sunil Kumar P V,Lecture,CSE
+Wednesday,12:00-13:00,C305,PH353,Quantum HPC and AI,Dr. Manish M (Dr. Aswath),Lecture,CSE
+Wednesday,12:00-13:00,C206,DS306,Financial Data Analytics,Dr.Utkarsh Khaire,Lecture,DSAI
+Wednesday,12:00-13:00,C101,EC361,Introduction to 5G Network,Dr. Jagadeesha R Bhat,Tutorial,ECE
+Wednesday,12:00-13:00,C102,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Lecture,ECE
+Wednesday,12:00-13:00,C104, HS161,English Language and Communication,Dr. Rajesh N S,Lecture,DSAI
+Wednesday,12:00-13:00,C202, CS163,Data Structures and Algorithms,Dr. Sunil Saumya,Lecture,DSAI
+Wednesday,13:00-14:00,,,Lunch Break,,Break,
+Wednesday,14:00-15:00,C002, DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,ECE
+Wednesday,14:00-15:00,C003,EC451,Microwave Engineering,Dr. Somen,Tutorial,CSE
+Wednesday,14:00-15:00,C303,CS307,Machine Learning,Dr. Deepak K T,Lecture,ECE
+Wednesday,14:00-15:00,C305,DS205,Global Business Perspectives,Mr. Manmohan Singh ( Course Coordinator: Dr. Rajendra Hegadi),Lecture,DSAI
+Wednesday,15:00-16:00,C002,MA202,Linear Algebra,Dr. Anand Barangi,Lecture,CSE
+Wednesday,15:00-16:00,C003,CS462,Computer Graphics,Dr. Vivekraj V K,Lecture,CSE
+Wednesday,15:00-16:00,C004,CS206,Theory of Computation,Dr. Pavan/ Dr. Sunil C K,Lecture,CSE
+Wednesday,15:00-16:00,C305,DS205,Global Business Perspectives,Mr. Manmohan Singh ( Course Coordinator: Dr. Rajendra Hegadi),Lecture,DSAI
+Wednesday,15:00-16:00,C101,HS204,Economics,Dr.Anushree K,Lecture,ECE
+Wednesday,15:00-16:00,C102,HS206,Industrial Social Psychology,Dr. Navyashree,Lecture,DSAI
+Wednesday,15:00-16:00,L206,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Practical,ECE
+Wednesday,15:00-16:00,L105,CS307,Machine Learning,Dr. Girish G N/ Dr. Krishnendu Ghosh,Practical,CSE
+Wednesday,16:00-17:00,C002,DS355,Data Analytics and Visualization,Dr. Sunil CK,Lecture,CSE
+Wednesday,16:00-17:00,C303,CS301,Software Engineering,Dr. Vivekraj V K/ Dr. Sunil Kumar P V,Lecture,CSE
+Wednesday,16:00-17:00,C305,DS358,Deep Speech Processing,Prof. SRM Prasanna,Lecture,ECE
+Wednesday,16:00-17:00,C206,HS205,Ethics,Dr. Jolly Thomas,Lecture,ECE
+Wednesday,16:00-17:00,C101,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Lecture,ECE
+Wednesday,17:00-17:30,,,Snack Break,,Break,
+Thursday,09:00-10:00,C002, DS351,Statistics for Health Technology,Dr. Ramesh Athe,Tutorial,ECE
+Thursday,09:00-10:00,C302,EC205,Control Systems,Dr. Pankaj Kumar,Lecture,ECE
+Thursday,09:00-10:00,C305,DS204,Software Engineering and Services,Dr. Animesh Chaturvedi,Lecture,DSAI
+Thursday,09:00-10:00,C202,CS163,Data Structures & Algorithms,Dr. C. B. Akki/ Dr Suvadip Hazra,Lecture,CSE
+Thursday,10:00-11:00,C002,MA163,Linear Algebra,Dr. Sibasankar Padhy/ Dr Somen Bhattacharjee,Lecture,CSE
+Thursday,10:00-11:00,C206,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Lecture,DSAI
+Thursday,10:00-11:00,C104,CS455,Blockchain Technology,Dr. Rajendra H,Lecture,DSAI
+Thursday,11:00-12:00,C002,HS161,English Language and Communication,Dr. Rajesh N S,Lecture,ECE
+Thursday,11:00-12:00,C003,DS307,Innovation and Entrepreneurship,Mr. Ram Subramanian ( Course Coordinator: Dr.  Manjunath KV),Lecture,DSAI
+Thursday,11:00-12:00,C004,CS206,Theory of Computation,Dr. Pavan/ Dr. Sunil C K,Tutorial,CSE
+Thursday,11:00-12:00,C305,DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,CSE
+Thursday,11:00-12:00,C206,HS205,Ethics,Dr. Jolly Thomas,Lecture,ECE
+Thursday,11:00-12:00,L107,EC205,Control Systems,Dr. Pankaj Kumar,Practical,ECE
+Thursday,12:00-13:00,C002, DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,ECE
+Thursday,12:00-13:00,C302,EC162,Network Analysis,Dr. Sibasankar Padhy,Lecture,ECE
+Thursday,12:00-13:00,C305,DS358,Deep Speech Processing,Prof. SRM Prasanna,Tutorial,ECE
+Thursday,12:00-13:00,C206,DS309,Cloud Computing,Dr. Animesh Chaturvedi,Lecture,DSAI
+Thursday,12:00-13:00,C104,CS455,Blockchain Technology,Dr. Rajendra H,Lecture,DSAI
+Thursday,12:00-13:00,L107,CS204,Operating System,Dr. Suvadip Hazra/ Dr. Malay/ Dr. Dibyajyothi,Practical,CSE
+Thursday,13:00-14:00,,,Lunch Break,,Break,
+Thursday,14:00-15:00,C002,MA202,Linear Algebra,Dr. Anand Barangi,Lecture,CSE
+Thursday,14:00-15:00,C003,CS165,Mathematical foundations of Computing,Dr. Animesh Roy,Lecture,CSE
+Thursday,14:00-15:00,C101,CS458,Natural Language Processing,Dr. Krishnendu,Lecture,ECE
+Thursday,14:00-15:00,C102,EC310,Embedded Systems Design,Dr. Prakash Pawar,Lecture,ECE
+Thursday,14:00-15:00,C104,DS308,Data Security and Privacy,Dr. Abdul Wahid & Dr. Rajendra Hegadi,Lecture,DSAI
+Thursday,15:00-16:00,C002, DS351,Statistics for Health Technology,Dr. Ramesh Athe,Lecture,ECE
+Thursday,15:00-16:00,C204, CS164,Computer Architecture,Dr. Manjunath,Lecture,DSAI
+Thursday,15:00-16:00,C305,DS358,Deep Speech Processing,Prof. SRM Prasanna,Lecture,ECE
+Thursday,15:00-16:00,C206,DS356,Medical Image Analysis,Dr. Girish GN,Lecture,CSE
+Thursday,15:00-16:00,C202,CS164,Computer Architecture,Dr.Jagadish D N,Lecture,ECE
+Thursday,16:00-17:00,C002,ASD351,Design Thinking and Innovation,Dr. Sandesh P,Lecture,ECE
+Thursday,16:00-17:00,C003,CS462,Computer Graphics,Dr. Vivekraj V K,Lecture,CSE
+Thursday,16:00-17:00,C305,DS351,Statistics for Health Technology,Dr. Ramesh Athe,Tutorial,CSE
+Thursday,16:00-17:00,C104,DS308,Data Security and Privacy,Dr. Abdul Wahid & Dr. Rajendra Hegadi,Lecture,DSAI
+Thursday,17:00-17:30,,,Snack Break,,Break,
+Friday,09:00-10:00,C002,ASD351,Design Thinking and Innovation,Dr. Sandesh P,Lecture,ECE
+Friday,09:00-10:00,C203,EC205,Control Systems,Dr. Pankaj Kumar,Lecture,ECE
+Friday,09:00-10:00,C101,HS204,Economics,Dr.Anushree K,Lecture,ECE
+Friday,09:00-10:00,C202,DS164,Data Curation Techniques,Dr. Siddharth R.,Lecture,DSAI
+Friday,10:00-11:00,C003,CS162,Optimization,Dr. Dibyajyoti Guha,Lecture,DSAI
+Friday,11:00-12:00,C002,DS357,Large Languange Models,Dr. Sunil S,Tutorial,CSE
+Friday,11:00-12:00,C303,CS301,Software Engineering,Dr. Vivekraj V K/ Dr. Sunil Kumar P V,Lecture,CSE
+Friday,11:00-12:00,C305,CS204,Operating System,Dr. Suvadip Hazra/ Dr. Malay/ Dr. Dibyajyothi,Lecture,CSE
+Friday,11:00-12:00,C206,DS356,Medical Image Analysis,Dr. Girish GN,Lecture,CSE
+Friday,11:00-12:00,C101,CS464,Deep Learning for Computer Vision ,Dr. Chinmayanand,Lecture,ECE
+Friday,12:00-13:00,C003,DS307,Innovation and Entrepreneurship,Mr. Ram Subramanian ( Course Coordinator: Dr.  Manjunath KV),Tutorial,DSAI
+Friday,12:00-13:00,C204,CS365,Model Checking,Dr. Pavan,Lecture,CSE
+Friday,12:00-13:00,C202,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Lecture,DSAI
+Friday,12:00-13:00,L106, CS164,Computer Architecture,Dr. Manjunath,Practical,DSAI
+Friday,13:00-14:00,,,Lunch Break,,Break,
+Friday,14:00-15:00,C002,MA202,Linear Algebra,Dr. Anand Barangi,Lecture,CSE
+Friday,14:00-15:00,C003,CS165,Mathematical foundations of Computing,Dr. Animesh Roy,Lecture,CSE
+Friday,14:00-15:00,C305,EC307,Wireless Communication,Dr. Rajib Sharma/ Dr. Rao (Lab),Lecture,ECE
+Friday,14:00-15:00,C203,CS310,Database Management System,Dr. Shirshendu and Dr. Utkarsh Khaire,Tutorial,DSAI
+Friday,15:00-16:00,C002,MA163,Linear Algebra,Dr. Sibasankar Padhy/ Dr Somen Bhattacharjee,Tutorial,CSE
+Friday,15:00-16:00,C003,DS307,Innovation and Entrepreneurship,Mr. Ram Subramanian ( Course Coordinator: Dr.  Manjunath KV),Lecture,DSAI
+Friday,15:00-16:00,C206,DS306,Financial Data Analytics,Dr.Utkarsh Khaire,Lecture,DSAI
+Friday,15:00-16:00,C101,EC361,Introduction to 5G Network,Dr. Jagadeesha R Bhat,Lecture,ECE
+Friday,15:00-16:00,C102,EC204,Analog and Digital Communication,Dr. Somen Bhattacharjee / Dr. Jagadish D N (Lab),Lecture,ECE
+Friday,15:00-16:00,C104,EC362,Automotive Embedded and Multimedia Systems,Mr. Jagadeesh K                                              (Dr Sibasankar Padhy),Lecture,CSE
+Friday,15:00-16:00,L206,DS164,Data Curation Techniques,Dr. Siddharth R.,Practical,DSAI
+Friday,16:00-17:00,C002,ASD351,Design Thinking and Innovation,Dr. Sandesh P,Lecture,ECE
+Friday,16:00-17:00,C003,DS307,Innovation and Entrepreneurship,Mr. Ram Subramanian ( Course Coordinator: Dr.  Manjunath KV),Lecture,DSAI
+Friday,16:00-17:00,C204,CS455,Blockchain Technology,Dr. Rajendra H,Tutorial,CSE
+Friday,16:00-17:00,C302,DS204,Software Engineering and Services,Dr. Animesh Chaturvedi,Lecture,DSAI
+Friday,16:00-17:00,C206,CS471,Deep Computer Vision,Chinmayanand,Lecture,CSE
+Friday,16:00-17:00,C101,CS458,Natural Language Processing,Dr. Krishnendu,Tutorial,ECE
+Friday,17:00-17:30,,,Snack Break,,Break,
